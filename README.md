@@ -84,6 +84,8 @@ All issues are stored in a single collection called **`issues`**.
   "createdAt": "Timestamp"
 }
 
+---
+
 ### 👨‍💻 Author
 
 ## Gowtham Nekkala
