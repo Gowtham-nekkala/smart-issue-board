@@ -1,0 +1,352 @@
+/* =========================
+   GLOBAL RESET & BOX MODEL
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: #e5e7eb; /* darker background */
+  color: #1f2937;
+}
+
+h2, h3, h4 {
+  margin: 0 0 14px;
+}
+
+p {
+  margin: 6px 0;
+  color: #374151;
+}
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+input,
+textarea,
+select {
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1.5px solid #cbd5e1;
+  font-size: 14px;
+  margin: 10px 0 18px 0;
+  background-color: #ffffff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+/* Right-align primary button inside cards (OPTIONAL POLISH) */
+.card button {
+  margin-top: 10px;
+}
+
+/* =========================
+   AUTH PAGES
+========================= */
+.auth-container {
+  max-width: 420px;
+  margin: 120px auto;
+  background: white;
+  padding: 36px;
+  border-radius: 16px;
+  border: 1.5px solid #e5e7eb;
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.12);
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.auth-container span {
+  color: #2563eb;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+.dashboard-container {
+  padding: 32px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Section divider (OPTIONAL) */
+.section {
+  margin-top: 32px;
+  padding-top: 10px;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* =========================
+   FILTERS
+========================= */
+.filters {
+  display: flex;
+  gap: 16px;
+  margin: 22px 0;
+}
+
+/* =========================
+   CARDS
+========================= */
+.card {
+  background: #ffffff;
+  padding: 26px 28px;
+  border-radius: 14px;
+  border: 1.5px solid #e5e7eb;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+  margin-bottom: 26px;
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: #c7d2fe;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   ISSUE CARD
+========================= */
+.issue-card {
+  position: relative;
+}
+
+/* Priority badges */
+.badge {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.badge.low {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge.medium {
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+.badge.high {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* =========================
+   EMPTY STATE (OPTIONAL)
+========================= */
+.empty-state {
+  text-align: center;
+  padding: 45px;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+nav {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: white;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+nav button {
+  background: #ef4444;
+  padding: 8px 16px;
+}
+
+nav button:hover {
+  background: #dc2626;
+}
+
+/* =========================
+   START PAGE
+========================= */
+.start-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+}
+
+.start-card {
+  background: white;
+  padding: 50px 60px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.25);
+  animation: fadeUp 0.9s ease;
+}
+
+.logo {
+  font-size: 38px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+  animation: glow 2.5s infinite alternate;
+}
+
+.tagline {
+  font-size: 15px;
+  margin-bottom: 30px;
+  color: #4b5563;
+}
+
+.start-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+/* Outline button */
+.start-buttons .outline {
+  background: transparent;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+}
+
+.start-buttons .outline:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 6px rgba(37, 99, 235, 0.4);
+  }
+  to {
+    text-shadow: 0 0 16px rgba(37, 99, 235, 0.8);
+  }
+}
+
+/* =========================
+   ERROR MESSAGE UI
+========================= */
+.error-box {
+  background: #fee2e2;
+  border: 1.5px solid #fca5a5;
+  color: #991b1b;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+select:disabled {
+  background-color: #f3f4f6;
+  color: #6b7280;
+}
+/* =========================
+   CONFIRMATION BOX
+========================= */
+.confirm-box {
+  background: #fff7ed;
+  border: 1.5px solid #fed7aa;
+  color: #9a3412;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  animation: slideDown 0.3s ease;
+}
+
+.confirm-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.confirm-actions button {
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+.confirm-actions .cancel {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.confirm-actions .cancel:hover {
+  background: #d1d5db;
+}
