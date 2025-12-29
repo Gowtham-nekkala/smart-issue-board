@@ -83,12 +83,3 @@ All issues are stored in a single collection called **`issues`**.
   "createdBy": "user@gmail.com",
   "createdAt": "Timestamp"
 }
-
----
-
-### 👨‍💻 Author
-
-## Gowtham Nekkala
-
-Built as part of an internship assignment to demonstrate real-world problem solving,
-Firebase integration, and modern frontend development.
