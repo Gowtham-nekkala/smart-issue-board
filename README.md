@@ -112,7 +112,7 @@ If given more time, the following enhancements could be added:
 
 ## 👨‍💻 Author
 
-**Gowtham Nekkala**  
+**NEKKALA GOWTHAM**  
 B.Tech Student  
 
 This project was built as part of an internship assignment to demonstrate real-world problem solving,  
